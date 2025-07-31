@@ -1,12 +1,14 @@
-require("dotenv").config();
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
+import dotenv from "dotenv";
+dotenv.config();
+
+import express from "express";
+import mongoose from "mongoose";
+import cors from "cors";
+
+import empRoute from "./routes/empRoute.js";
+import taskRoute from "./routes/taskRoute.js";
 
 const app = express();
-
-const empRoute = require("./routes/empRoute");
-const taskRoute = require("./routes/taskRoute");
 
 app.use(express.json());
 app.use(cors());

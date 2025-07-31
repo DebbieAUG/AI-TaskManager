@@ -11,7 +11,7 @@ function App() {
   const [error, setError] = useState("");
   
   useEffect(() => {
-    fetch("http://localhost:5500/api/emp/empList")
+    fetch("https://crispy-xylophone-rwxgqj7qr6xcpg7g-5500.app.github.dev/api/emp/empList")
     .then((response) => {
       if(!response.ok) throw new Error ("Failed to fetch employees...")
         return response.json();
@@ -26,7 +26,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5500/api/task/getTaskList")
+    fetch("https://crispy-xylophone-rwxgqj7qr6xcpg7g-5500.app.github.dev/api/task/getTaskList")
     .then((response) => {
       if(!response.ok) throw new Error ("Failed to fetch employees...")
         return response.json();

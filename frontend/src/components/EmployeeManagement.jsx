@@ -12,7 +12,7 @@ export const EmployeeManagement = () => {
 
         try {
             console.log("Adding New Emp...");
-            const res = await axios.post("http://localhost:5500/api/emp/create", { empId, empName, empSkills });
+            const res = await axios.post("https://crispy-xylophone-rwxgqj7qr6xcpg7g-5500.app.github.dev/api/emp/create", { empId, empName, empSkills });
             console.log("Emp Added successfully...");
             setEmpId("");
             setEmpName("");
@@ -61,7 +61,7 @@ export const EmployeeManagement = () => {
 
             <div className="btn-group text-center">
                 <button 
-                    className="w-1/2 bg-indigo-500 text-white py-3"
+                    className="w-1/2 bg-green-500 text-white py-3"
                     onClick={handleAddEmp}
                 >
                     Add New Emp

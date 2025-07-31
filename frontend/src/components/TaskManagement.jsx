@@ -14,7 +14,7 @@ export const TaskManagement = ({employees}) => {
         // setTaskTitle(e.target.value);
         if(taskTitle.length > 3) {
             try {   
-                const response = await axios.post("http://localhost:5500/api/task/suggest", {input: taskTitle});
+                const response = await axios.post("https://crispy-xylophone-rwxgqj7qr6xcpg7g-5500.app.github.dev/api/task/suggest", {input: taskTitle});
                 setSuggestions(response.data.suggestions.split("\n"));
                 console.log("Suggestions :",suggestions);
             } catch (error) {
@@ -25,7 +25,7 @@ export const TaskManagement = ({employees}) => {
 
     const handleAssignTask = async (e) => {
         try {
-            const res = await axios.post("http://localhost:5500/api/task/createTask", {taskTitle, taskDesc, assignedEmp});
+            const res = await axios.post("https://crispy-xylophone-rwxgqj7qr6xcpg7g-5500.app.github.dev/api/task/createTask", {taskTitle, taskDesc, assignedEmp});
             setTaskTitle("");
             setTaskDesc("");
             setAssignedEmp("");
@@ -94,14 +94,14 @@ export const TaskManagement = ({employees}) => {
             <div className="btn-group text-center">
                 <button 
                     onClick={handleAssignTask}
-                    className="w-1/2 bg-indigo-500 text-white py-3"
+                    className="w-1/2 bg-green-500 text-white py-3"
                 >
                     Assign Task
                 </button>
 
                 <button 
                 onClick={handleTaskSuggestion}
-                    className="w-1/3 bg-indigo-500 text-white py-3 ml-2"
+                    className="w-1/3 bg-green-500 text-white py-3 ml-2"
                 >
                     Generate AI Task Suggestions
                 </button>

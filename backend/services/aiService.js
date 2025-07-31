@@ -5,7 +5,7 @@ const getTaskSuggestion = async (inputText) => {
     try {
         console.log("Get task suggestion for : ",inputText);
         const response = await axios.post(
-            "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent",
+            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent",
             {
                 contents: [
                     {parts : [
@@ -15,7 +15,7 @@ const getTaskSuggestion = async (inputText) => {
             },
             {
                 headers: {"Content-Type": "application/json"},
-                params: {key: "AIzaSyBS9GGt0a0Ay_ELLNIMsVk81Ol3EifLg8M"}
+                params: {key: "AIzaSyClA9OJpJiVGQqOMBe7UFld8l2W2fBmvmY"}
             }
         )
         console.log("Responses from Gemini : ".response);
@@ -33,7 +33,7 @@ const getTaskPrediction = async (inputText) => {
     try {
         console.log("Get task prediction for : ",inputText);
         const response = await axios.post(
-            "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent",
+            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent",
             {
                 contents: [
                     {parts : [
@@ -43,7 +43,7 @@ const getTaskPrediction = async (inputText) => {
             },
             {
                 headers: {"Content-Type": "application/json"},
-                params: {key: "AIzaSyBS9GGt0a0Ay_ELLNIMsVk81Ol3EifLg8M"}
+                params: {key: "AIzaSyClA9OJpJiVGQqOMBe7UFld8l2W2fBmvmY"}
             }
         )
         console.log("Responses from Gemini : ".response);
