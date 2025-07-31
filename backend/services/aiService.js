@@ -5,6 +5,7 @@ const getTaskSuggestion = async (inputText) => {
     try {
         console.log("Get task suggestion for : ",inputText);
         const response = await axios.post(
+            // generative model
             "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent",
             {
                 contents: [
@@ -15,7 +16,7 @@ const getTaskSuggestion = async (inputText) => {
             },
             {
                 headers: {"Content-Type": "application/json"},
-                params: {key: "AIzaSyClA9OJpJiVGQqOMBe7UFld8l2W2fBmvmY"}
+                params: {key: "AIzaSyClA9OJpJiVGQqOMBe7UFld8l2W2fBmvmY"} // API key from Gemini
             }
         )
         console.log("Responses from Gemini : ".response);
