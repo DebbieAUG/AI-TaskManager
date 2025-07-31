@@ -16,7 +16,7 @@ const getTaskSuggestion = async (inputText) => {
             },
             {
                 headers: {"Content-Type": "application/json"},
-                params: {key: "AIzaSyClA9OJpJiVGQqOMBe7UFld8l2W2fBmvmY"} // API key from Gemini
+                params: {key: ""} // API key from Gemini
             }
         )
         console.log("Responses from Gemini : ".response);
@@ -44,7 +44,7 @@ const getTaskPrediction = async (inputText) => {
             },
             {
                 headers: {"Content-Type": "application/json"},
-                params: {key: "AIzaSyClA9OJpJiVGQqOMBe7UFld8l2W2fBmvmY"}
+                params: {key: ""}
             }
         )
         console.log("Responses from Gemini : ".response);
